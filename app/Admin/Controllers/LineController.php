@@ -71,7 +71,7 @@ class LineController extends AdminController
             $form->text('name');
             $form->text('remark');
 
-            $form->multipleSelectTable('subways', trans('admin.subway_id'))
+            $form->multipleSelectTable('subways', trans('subway_id'))
                 ->from(SubwayTable::make())
                 ->max(20)
                 ->options(function () {

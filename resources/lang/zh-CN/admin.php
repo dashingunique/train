@@ -138,7 +138,6 @@ return [
     'route'                 => '路由',
     'confirm'               => '确认',
     'cancel'                => '取消',
-    'submit'                => '提交',
     'selectall'             => '全选',
     'http'                  => [
         'method' => 'HTTP方法',
@@ -226,5 +225,12 @@ return [
         'position'      => '工位管理',
         'reason'        => '下车原因',
         'configuration'      => '系统配置',
+        'carbon'        => '碳滑板管理',
+        'employee'      => '员工管理',
+        'analysis'      => '数据分析',
+        'lot'           => '批次管理',
+        'supplier'      => '供应商',
+        'brand'         => '品牌',
+        'calculate'     => '补偿计算',
     ],
 ];

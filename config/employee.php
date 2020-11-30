@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => '碳滑板装车系统',
+    'name' => '碳滑板装车系统员工端',
 
     /*
     |--------------------------------------------------------------------------
@@ -37,14 +37,14 @@ return [
     'logo-mini' => '<img src="/vendors/dcat-admin/images/logo.png">',
 
     /*
-     |--------------------------------------------------------------------------
-     | User default avatar
-     |--------------------------------------------------------------------------
-     |
-     | Set a default avatar for newly created users.
-     |
-     */
-    'default_avatar' => '@admin/images/default-avatar.jpg',
+	 |--------------------------------------------------------------------------
+	 | User default avatar
+	 |--------------------------------------------------------------------------
+	 |
+	 | Set a default avatar for newly created users.
+	 |
+	 */
+	'default_avatar' => '@admin/images/default-avatar.jpg',
 
     /*
     |--------------------------------------------------------------------------
@@ -58,9 +58,9 @@ return [
     */
     'route' => [
 
-        'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
+        'prefix' => 'employee',
 
-        'namespace' => 'App\\Admin\\Controllers',
+        'namespace' => 'App\\employee\\Controllers',
 
         'middleware' => ['web', 'admin'],
     ],
@@ -75,7 +75,7 @@ return [
     | be set before running `artisan admin::install` to take effect.
     |
     */
-    'directory' => app_path('Admin'),
+    'directory' => app_path('employee'),
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
     | Html title for all pages.
     |
     */
-    'title' => '总后台',
+    'title' => '员工端',
 
     /*
     |--------------------------------------------------------------------------
@@ -119,19 +119,19 @@ return [
     'auth' => [
         'enable' => true,
 
-        'controller' => App\Admin\Controllers\AuthController::class,
+        'controller' => App\employee\Controllers\AuthController::class,
 
-        'guard' => 'admin',
+        'guard' => 'employee',
 
         'guards' => [
-            'admin' => [
+            'employee' => [
                 'driver'   => 'session',
-                'provider' => 'admin',
+                'provider' => 'employee',
             ],
         ],
 
         'providers' => [
-            'admin' => [
+            'employee' => [
                 'driver' => 'eloquent',
                 'model'  => Dcat\Admin\Models\Administrator::class,
             ],
@@ -296,22 +296,22 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
-    | Admin map field provider
-    |--------------------------------------------------------------------------
-    |
-    | Supported: "tencent", "google", "yandex", "baidu".
-    |
-    */
-    'map' => [
-        'provider' => 'baidu',
+	|--------------------------------------------------------------------------
+	| Admin map field provider
+	|--------------------------------------------------------------------------
+	|
+	| Supported: "tencent", "google", "yandex", "baidu".
+	|
+	*/
+	'map' => [
+		'provider' => 'baidu',
 
-        'keys' => [
-            'tencent' => env('TENCENT_MAP_API_KEY'),
-            'google' => env('GOOGLE_API_KEY'),
-            'baidu' => env('BAIDU_MAP_API_KEY'),
-        ],
-    ],
+		'keys' => [
+			'tencent' => env('TENCENT_MAP_API_KEY'),
+			'google' => env('GOOGLE_API_KEY'),
+			'baidu' => env('BAIDU_MAP_API_KEY'),
+		],
+	],
 
     /*
     |--------------------------------------------------------------------------
@@ -329,7 +329,7 @@ return [
         'sidebar_collapsed' => false,
 
         // light, primary, dark
-        'sidebar_style' => 'light',
+		'sidebar_style' => 'light',
 
         'dark_mode_switch' => false,
 
@@ -356,16 +356,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Extension Directory
-    |--------------------------------------------------------------------------
-    |
-    | When you use command `php artisan admin:extend` to generate extensions,
-    | the extension files will be generated in this directory.
-    */
-    'extension_dir' => app_path('Admin/Extensions'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Settings for extensions.
     |--------------------------------------------------------------------------
     |
@@ -375,11 +365,5 @@ return [
     */
     'extensions' => [
 
-    ],
-
-    'multi_app' => [
-        // 与新应用的配置文件名称一致
-        // 设置为true启用，false则是停用
-        'employee' => true,
     ],
 ];

@@ -18,20 +18,21 @@ class SupplierController extends AdminController
     protected function grid()
     {
         return Grid::make(new Supplier(), function (Grid $grid) {
-            $grid->column('id');
+            $grid->column('id')->sortable();
             $grid->column('name');
-            $grid->column('address');
             $grid->column('tel');
             $grid->column('email');
-            $grid->column('remark');
+            $grid->column('content')
+                ->display('详情')
+                ->expand(function () use ($grid) {
+
+                });
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-                $filter->equal('name');
-                $filter->equal('tel');
-                $filter->equal('email');
+
             });
         });
     }
@@ -48,9 +49,13 @@ class SupplierController extends AdminController
         return Show::make($id, new Supplier(), function (Show $show) {
             $show->field('id');
             $show->field('name');
-            $show->field('address');
             $show->field('tel');
             $show->field('email');
+            $show->field('province_id');
+            $show->field('city_id');
+            $show->field('district_id');
+            $show->field('address');
+            $show->field('coordinate');
             $show->field('remark');
             $show->field('created_at');
             $show->field('updated_at');
@@ -67,9 +72,13 @@ class SupplierController extends AdminController
         return Form::make(new Supplier(), function (Form $form) {
             $form->display('id');
             $form->text('name');
-            $form->text('address');
             $form->text('tel');
             $form->text('email');
+            $form->text('province_id');
+            $form->text('city_id');
+            $form->text('district_id');
+            $form->text('address');
+            $form->text('coordinate');
             $form->text('remark');
 
             $form->display('created_at');

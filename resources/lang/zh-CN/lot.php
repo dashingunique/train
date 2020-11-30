@@ -1,4 +1,4 @@
-<?php 
+<?php
 return [
     'labels' => [
         'Lot' => 'Lot',
@@ -9,6 +9,7 @@ return [
         'pact_name' => '合同名称',
         'pact_number' => '合同编号',
         'supplier' => '供应商',
+        'model' => '型号'
     ],
     'options' => [
     ],

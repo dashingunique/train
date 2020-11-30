@@ -28,7 +28,9 @@ class SubwayTable extends LazyRenderable
     {
         return Grid::make(LineSubway::with(['subway']), function (Grid $grid) {
 //            $grid->disableActions();
-            $grid->model()->where('line_id', $this->key);
+            if (!empty($this->payload['key'])) {
+                $grid->model()->where('line_id', $this->payload['key']);
+            }
             $grid->quickSearch(['line_id', 'subway_id', 'subway.name']);
             $grid->column('id');
             $grid->column('subway.name');

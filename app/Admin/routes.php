@@ -19,6 +19,8 @@ Route::group([
     $router->resource('system/position', 'PositionController');
     $router->resource('system/reason', 'ReasonController');
     $router->resource('system/lot', 'LotController');
+    $router->resource('system/supplier', 'SupplierController');
+    $router->resource('system/brand', 'BrandController');
     $router->resource('system/carbon', 'CarbonController');
     $router->resource('system/up', 'UpController');
     $router->resource('system/down', 'DownController');
