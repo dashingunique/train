@@ -1,10 +1,10 @@
 <?php
 
 use Dcat\Admin\Admin;
-use Dcat\Admin\Grid;
-use Dcat\Admin\Form;
-use Dcat\Admin\Grid\Filter;
-use Dcat\Admin\Show;
+use App\Actions\DcatSystemConfig;
+use Dcat\Admin\Layout\Navbar;
+use Dcat\Admin\Support\Helper;
+use App\Admin\Actions\SystemCarbonConfig;
 
 /**
  * Dcat-admin - admin builder based on Laravel.
@@ -24,3 +24,13 @@ use Dcat\Admin\Show;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+config(['admin' => systemConfig()]);
+config(['carbon' => systemCarbonConfig()]);
+config(['app.locale' => config('admin.lang') ?: config('app.locale')]);
+
+Admin::navbar(function (Navbar $navbar) {
+    if (!Helper::isAjaxRequest()) {
+        $navbar->right(DcatSystemConfig::make());
+//        $navbar->right(SystemCarbonConfig::make());
+    }
+});

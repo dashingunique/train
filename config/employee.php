@@ -244,27 +244,27 @@ return [
         'connection' => '',
 
         // User tables and model.
-        'users_table' => 'admin_users',
-        'users_model' => Dcat\Admin\Models\Administrator::class,
+        'users_table' => 'employee',
+        'users_model' => App\Models\Employee::class,
 
         // Role table and model.
-        'roles_table' => 'admin_roles',
-        'roles_model' => Dcat\Admin\Models\Role::class,
+        'roles_table' => 'employee_roles',
+        'roles_model' => App\Models\EmployeeRole::class,
 
         // Permission table and model.
-        'permissions_table' => 'admin_permissions',
-        'permissions_model' => Dcat\Admin\Models\Permission::class,
+        'permissions_table' => 'employee_permissions',
+        'permissions_model' => App\Models\EmployeePermissions::class,
 
         // Menu table and model.
-        'menu_table' => 'admin_menu',
-        'menu_model' => Dcat\Admin\Models\Menu::class,
+        'menu_table' => 'employee_menu',
+        'menu_model' => App\Models\EmployeeMenu::class,
 
         // Pivot table for table above.
-        'operation_log_table'    => 'admin_operation_log',
-        'role_users_table'       => 'admin_role_users',
-        'role_permissions_table' => 'admin_role_permissions',
-        'role_menu_table'        => 'admin_role_menu',
-        'permission_menu_table'  => 'admin_permission_menu',
+        'operation_log_table'    => 'employee_operation_log',
+        'role_users_table'       => 'employee_role_users',
+        'role_permissions_table' => 'employee_role_permissions',
+        'role_menu_table'        => 'employee_role_menu',
+        'permission_menu_table'  => 'employee_permission_menu',
     ],
 
     /*

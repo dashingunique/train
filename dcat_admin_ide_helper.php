@@ -47,11 +47,13 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection lot_id
      * @property Grid\Column|Collection sign
      * @property Grid\Column|Collection init_ply
+     * @property Grid\Column|Collection used_ply
+     * @property Grid\Column|Collection residue_ply
      * @property Grid\Column|Collection operating
+     * @property Grid\Column|Collection loading
+     * @property Grid\Column|Collection unload
      * @property Grid\Column|Collection status
      * @property Grid\Column|Collection repeated
-     * @property Grid\Column|Collection surplus_ply
-     * @property Grid\Column|Collection loading
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
      * @property Grid\Column|Collection payload
@@ -59,11 +61,18 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection failed_at
      * @property Grid\Column|Collection line_id
      * @property Grid\Column|Collection subway_id
+     * @property Grid\Column|Collection carbon_id
+     * @property Grid\Column|Collection position_id
+     * @property Grid\Column|Collection state
+     * @property Grid\Column|Collection loading_id
+     * @property Grid\Column|Collection role
+     * @property Grid\Column|Collection operator_id
+     * @property Grid\Column|Collection desc
      * @property Grid\Column|Collection lot_sign
      * @property Grid\Column|Collection supplier_id
      * @property Grid\Column|Collection brand_id
-     * @property Grid\Column|Collection pact_name
      * @property Grid\Column|Collection pact_number
+     * @property Grid\Column|Collection pact_name
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection token
      * @property Grid\Column|Collection tel
@@ -110,11 +119,13 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection lot_id(string $label = null)
      * @method Grid\Column|Collection sign(string $label = null)
      * @method Grid\Column|Collection init_ply(string $label = null)
+     * @method Grid\Column|Collection used_ply(string $label = null)
+     * @method Grid\Column|Collection residue_ply(string $label = null)
      * @method Grid\Column|Collection operating(string $label = null)
+     * @method Grid\Column|Collection loading(string $label = null)
+     * @method Grid\Column|Collection unload(string $label = null)
      * @method Grid\Column|Collection status(string $label = null)
      * @method Grid\Column|Collection repeated(string $label = null)
-     * @method Grid\Column|Collection surplus_ply(string $label = null)
-     * @method Grid\Column|Collection loading(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
      * @method Grid\Column|Collection payload(string $label = null)
@@ -122,11 +133,18 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection failed_at(string $label = null)
      * @method Grid\Column|Collection line_id(string $label = null)
      * @method Grid\Column|Collection subway_id(string $label = null)
+     * @method Grid\Column|Collection carbon_id(string $label = null)
+     * @method Grid\Column|Collection position_id(string $label = null)
+     * @method Grid\Column|Collection state(string $label = null)
+     * @method Grid\Column|Collection loading_id(string $label = null)
+     * @method Grid\Column|Collection role(string $label = null)
+     * @method Grid\Column|Collection operator_id(string $label = null)
+     * @method Grid\Column|Collection desc(string $label = null)
      * @method Grid\Column|Collection lot_sign(string $label = null)
      * @method Grid\Column|Collection supplier_id(string $label = null)
      * @method Grid\Column|Collection brand_id(string $label = null)
-     * @method Grid\Column|Collection pact_name(string $label = null)
      * @method Grid\Column|Collection pact_number(string $label = null)
+     * @method Grid\Column|Collection pact_name(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection tel(string $label = null)
@@ -178,11 +196,13 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection lot_id
      * @property Show\Field|Collection sign
      * @property Show\Field|Collection init_ply
+     * @property Show\Field|Collection used_ply
+     * @property Show\Field|Collection residue_ply
      * @property Show\Field|Collection operating
+     * @property Show\Field|Collection loading
+     * @property Show\Field|Collection unload
      * @property Show\Field|Collection status
      * @property Show\Field|Collection repeated
-     * @property Show\Field|Collection surplus_ply
-     * @property Show\Field|Collection loading
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
      * @property Show\Field|Collection payload
@@ -190,11 +210,18 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection failed_at
      * @property Show\Field|Collection line_id
      * @property Show\Field|Collection subway_id
+     * @property Show\Field|Collection carbon_id
+     * @property Show\Field|Collection position_id
+     * @property Show\Field|Collection state
+     * @property Show\Field|Collection loading_id
+     * @property Show\Field|Collection role
+     * @property Show\Field|Collection operator_id
+     * @property Show\Field|Collection desc
      * @property Show\Field|Collection lot_sign
      * @property Show\Field|Collection supplier_id
      * @property Show\Field|Collection brand_id
-     * @property Show\Field|Collection pact_name
      * @property Show\Field|Collection pact_number
+     * @property Show\Field|Collection pact_name
      * @property Show\Field|Collection email
      * @property Show\Field|Collection token
      * @property Show\Field|Collection tel
@@ -241,11 +268,13 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection lot_id(string $label = null)
      * @method Show\Field|Collection sign(string $label = null)
      * @method Show\Field|Collection init_ply(string $label = null)
+     * @method Show\Field|Collection used_ply(string $label = null)
+     * @method Show\Field|Collection residue_ply(string $label = null)
      * @method Show\Field|Collection operating(string $label = null)
+     * @method Show\Field|Collection loading(string $label = null)
+     * @method Show\Field|Collection unload(string $label = null)
      * @method Show\Field|Collection status(string $label = null)
      * @method Show\Field|Collection repeated(string $label = null)
-     * @method Show\Field|Collection surplus_ply(string $label = null)
-     * @method Show\Field|Collection loading(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
      * @method Show\Field|Collection payload(string $label = null)
@@ -253,11 +282,18 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection failed_at(string $label = null)
      * @method Show\Field|Collection line_id(string $label = null)
      * @method Show\Field|Collection subway_id(string $label = null)
+     * @method Show\Field|Collection carbon_id(string $label = null)
+     * @method Show\Field|Collection position_id(string $label = null)
+     * @method Show\Field|Collection state(string $label = null)
+     * @method Show\Field|Collection loading_id(string $label = null)
+     * @method Show\Field|Collection role(string $label = null)
+     * @method Show\Field|Collection operator_id(string $label = null)
+     * @method Show\Field|Collection desc(string $label = null)
      * @method Show\Field|Collection lot_sign(string $label = null)
      * @method Show\Field|Collection supplier_id(string $label = null)
      * @method Show\Field|Collection brand_id(string $label = null)
-     * @method Show\Field|Collection pact_name(string $label = null)
      * @method Show\Field|Collection pact_number(string $label = null)
+     * @method Show\Field|Collection pact_name(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection tel(string $label = null)

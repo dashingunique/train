@@ -232,5 +232,7 @@ return [
         'supplier'      => '供应商',
         'brand'         => '品牌',
         'calculate'     => '补偿计算',
+        'loading'       => '装车在用',
+        'unload'        => '下车已用'
     ],
 ];
